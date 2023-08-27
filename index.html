@@ -11,6 +11,9 @@
     .name,h2,h3 {
         font-family: "Palatino", serif;
     }
+    h2,h3 {
+        margin-bottom: 3px;
+    }
     a {
         color: black;
     }
@@ -19,6 +22,10 @@
         height: 196px; /* image height in px */
         display: flex;
         align-items: center;
+    }
+    .section {
+        border-left: solid 2px black;
+        padding-left: 7px;
     }
   </style>
 </head>
@@ -30,21 +37,46 @@
     </div>
   </div>
   <h2>Education</h2>
-  <p>Cornell University, College of Engineering, Ithaca, NY - Expected May 2025</p>
-  <p>Bachelor of Science, Earth and Atmospheric Sciences - Cumulative GPA 3.9 - Dean's List</p>
-  <h3>Relevant Coursework</h3>
-  Calculus, Multivariable Calculus, Differential Equations, Linear Algebra, Applied Complex Analysis, Numerical Analysis - Mechanics and Special Relativity, Electromagnetism - Data Structures, Discrete Structures, Computer Systems - Lasers & Photonics, Statics & Mechanics of Solids, Thermodynamics - The Earth System, Geodynamics, Field Geophysics, Biogeochemistry, Climate Dynamics, Stream Ecology
+  <div class="section">
+    Cornell University, College of Engineering, Ithaca, NY &mdash; Expected May 2025
+    <br>
+    Bachelor of Science, Earth and Atmospheric Sciences &mdash; Cumulative GPA 3.9 &mdash; Dean's List
+  </div>
+  <div class="section">
+    <h3>Relevant Coursework</h3>
+    Calculus, Multivariable Calculus, Differential Equations, Linear Algebra, Applied Complex Analysis, Numerical Analysis &cir; Mechanics and Special Relativity, Electromagnetism &cir; Data Structures, Discrete Structures, Computer Systems &cir; Lasers & Photonics, Statics & Mechanics of Solids, Thermodynamics &cir; The Earth System, Geodynamics, Field Geophysics, Biogeochemistry, Climate Dynamics, Stream Ecology
+  </div>
   <h2>Work Experience</h2>
-  <h3>URISE Internship</h3>
-  <h3>VMware Inc.</h3>
+  <div class="section">
+    <h3>Earthscope Undergraduate Research Internship in Seismology (URISE)<span style="float: right;">Summer 2023</span></h3>
+    I worked with professor Lindsay Worthington at the University of New Mexico to model seismic velocities offshore of Kodiak Island, Alaska.
+    Check out my internship blog entries <a href="https://www.iris.edu/hq/internship/blog/user/597">here</a>.
+    I am presenting our findings at the Fall 2023 AGU session in San Francisco.
+    <div style="width: max-content;">
+      <a href="https://github.com/jacksonfellows/research_summer_23">
+        <div style="display:flex; align-items:center;">
+          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">
+          https://github.com/jacksonfellows/research_summer_23
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="section">
+    <h3>VMware Inc.<span style="float: right;">Summers 2017&ndash;2020</span></h3>
+    I worked as a software engineering intern for VMware as a student in high school.
+    I collaborated with a team of developers building a cloud security product.
+    I wrote production code in Python and Go and worked with tools including Docker and AWS.
+  </div>
   <h2>Independent Projects</h2>
-  <div>
-    <a href="https://github.com/jacksonfellows/euler">
-      <div style="display:flex;align-items:center;">
-        <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">
-        https://github.com/jacksonfellows/euler
-      </div>
-    </a>
+  <div class="section">
+    <div style="width: max-content;">
+      <a href="https://github.com/jacksonfellows/euler">
+        <div style="display:flex; align-items:center;">
+          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">
+          https://github.com/jacksonfellows/euler
+        </div>
+      </a>
+    </div>
     Ongoing collection of 140+ <a href="https://www.projecteuler.net">Project Euler</a> solutions in 9 programming languages.
   </div>
 </body>
