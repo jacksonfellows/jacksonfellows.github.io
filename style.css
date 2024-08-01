@@ -1,0 +1,43 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14pt;
+}
+.name {
+    font-size: 40pt;
+    font-weight: bold;
+}
+.name,h2,h3,h4 {
+    font-family: "Palatino", serif;
+}
+h2,h3 {
+    margin-bottom: 3px;
+}
+h4 {
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 3px;
+}
+a {
+    color: black;
+}
+.header {
+    background: url("IMG_1646.png") no-repeat scroll center top;
+    height: 196px; /* image height in px */
+    display: flex;
+    align-items: center;
+}
+.section {
+    border-left: solid 2px black;
+    padding-left: 7px;
+}
+.course-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5px;
+    text-align: left;
+}
+/* Printing. */
+@page {
+    margin: 0.1in;
+}
