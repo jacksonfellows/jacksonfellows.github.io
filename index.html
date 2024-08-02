@@ -5,13 +5,29 @@
     .item {
         margin-block-end: 0.4em;
     }
+    #box {
+        text-align: center;
+        max-width: 300px;
+    }
+    @media screen and (max-width: 1000px) and (min-height: 1300px) {
+        #box {
+            width: 100vw;
+            max-width: none;
+        }
+        #name {
+            font-size: 9vw;
+        }
+        .item {
+            font-size: 6vw;
+        }
+    }
   </style>
   <title>Jackson Fellows</title>
 </head>
 <body style="display: flex; justify-content: center;">
-  <div style="text-align: center; max-width: 300px;">
-    <h2 class="item">Jackson Fellows</h2>
-    <img src="head.jpg" height="180ax">
+  <div id="box">
+    <h2 class="item" id="name">Jackson Fellows</h2>
+    <img src="head.jpg" width="60%">
     <p class="item">jf787@cornell.edu, jtfellows@icloud.com</p>
     <p class="item"><a href="https://github.com/jacksonfellows">GitHub Profile</a></p>
     <p class="item"><a href="resume.html">Resume</a></p>
