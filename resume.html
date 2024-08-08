@@ -43,25 +43,32 @@
   </div>
   <div class="section">
     <h3>Research<span style="float: right;">Fall 2023&ndash;Present</span></h3>
-    <!-- Working with Professor Grace Barcheck at Cornell on using machine learning to discriminate between seismic signals from earthquakes and surface events. -->
-    I am working with Professor Grace Barcheck at Cornell to create and analyze a new catalog of slope failure events on Cascade volcanoes from existing seismic data.
-    In fall 2023, I created classification models to discriminate between surface event and earthquake waveforms.
-    I am currently exploring deep-learning pickers that can identify and classify arrivals in continuous data.
-    The final goal is to apply my model to historic data recorded at the volcano-monitoring stations of the Pacific Northwest Seismic Network.
-    My work in the spring semester of 2024 is funded by the Engineering Learning Initiatives program at Cornell.
-    <div style="width: max-content;">
-      <a href="https://github.com/jacksonfellows/seismoslide">
-        <div style="display:flex; align-items:center;">
-          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">
-          https://github.com/jacksonfellows/seismoslide
-        </div>
-      </a>
+    I am working with Professor Grace Barcheck at Cornell to build a deep learning model that can identify surface event arrivals in continuous seismic data, as well as discriminate between these arrivals and those from other sources of seismic energy, such as earthquakes and explosions.
+    We are currently applying our model to historical data recorded around Mt. St. Helens by the Pacific Northwest Seismic Network.
+    My work in the spring semester of 2024 was funded by the Engineering Learning Initiatives program at Cornell.
+    <div style="margin-top: 5px;">
+      Code I have written along the way includes:
+      <div style="display: flex; column-gap: 20px; flex-wrap: wrap;">
+        <a href="https://github.com/jacksonfellows/seismoslide" style="display: flex; align-items: center;">
+          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">https://github.com/jacksonfellows/seismoslide
+        </a>
+        <a href="https://github.com/jacksonfellows/pickhelper" style="display: flex; align-items: center;">
+          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">https://github.com/jacksonfellows/pickhelper
+        </a>
+        <a href="https://github.com/jacksonfellows/pytorch-seismic-inference" style="display: flex; align-items: center;">
+          <img src="github_logo.svg" height="20" width="20" style="padding: 0 5 0 0">https://github.com/jacksonfellows/pytorch-seismic-inference
+        </a>
+      </div>
     </div>
   </div>
   <h2>Work Experience</h2>
-  <!-- <div class="section"> -->
-  <!--   <h3>USGS Pathways Internship<span style="float: right;">Summer 2024</span></h3> -->
-  <!-- </div> -->
+  <div class="section">
+    <h3>USGS Pathways Internship<span style="float: right;">Summer 2024</span></h3>
+    I worked with Bill Barnhart to develop modern versions of codes that are used to build the <a href="https://pubs.geoscienceworld.org/ssa/bssa/article/112/6/2946/617576/The-Geodetic-Centroid-gCent-Catalog-Global">gCent</a> (geodetic centroid) earthquake catalog.
+    The goal of the geodetic centroid catalog is to provide an independent constraint on seismically-derived earthquake origin information (generally with lower location uncertainties, especially for depth).
+    I developed Python codes to compute Okada's Green's functions for rectangular dislocations, resample interferograms for optimal earthquake inversions, and run the neighborhood algorithm (a method of nonlinear inversion) to find best-fitting fault planes.
+    In the future, these codes will be open-sourced by the USGS.
+  </div>
   <div class="section">
     <h3>Earthscope Undergraduate Research Internship in Seismology (URISE)<span style="float: right;">Summer 2023</span></h3>
     I worked with Professor Lindsay Worthington at the University of New Mexico to model seismic velocities offshore of Kodiak Island, Alaska.
