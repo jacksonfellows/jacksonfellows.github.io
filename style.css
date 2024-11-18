@@ -38,6 +38,6 @@ a {
     text-align: left;
 }
 /* Printing. */
-@page {
-    margin: 0.1in;
-}
+/* @page { */
+/*     margin: 0.1in; */
+/* } */
