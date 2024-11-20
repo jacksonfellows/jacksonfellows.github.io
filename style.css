@@ -10,6 +10,7 @@ body {
     font-family: "Palatino", serif;
 }
 h2,h3 {
+    margin-top: 7px;
     margin-bottom: 3px;
 }
 h4 {
@@ -22,11 +23,16 @@ a {
     color: black;
 }
 .header {
-    background: url("IMG_1646.png") no-repeat scroll center top;
-    height: 196px; /* image height in px */
+    background: url("header_paper_outline.svg") no-repeat scroll center top;
+    height: 140px;
     display: flex;
     align-items: center;
 }
+/* @media print { */
+/*     .header { */
+/*         background: url("header_short.png") no-repeat scroll center top; */
+/*     } */
+/* } */
 .section {
     border-left: solid 2px black;
     padding-left: 7px;
