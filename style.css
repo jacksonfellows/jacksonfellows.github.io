@@ -36,6 +36,7 @@ a {
 .section {
     border-left: solid 2px black;
     padding-left: 7px;
+    padding-bottom: 7px;
 }
 .course-wrapper {
     display: grid;
