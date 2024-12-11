@@ -2,12 +2,52 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
     .item {
+        margin: 0.6em;
         margin-block-end: 0.4em;
     }
     #box {
         text-align: center;
         max-width: 300px;
+        display: grid;
+        grid-template-rows: max-content 1fr;
+        height: 100%;
+        grid-row-gap: 40px;
+    }
+    #gh-logo {
+        vertical-align: middle;
+        padding: 0 0px 5px 0;
+        height: 20px;
+        width: 20px;
+    }
+    .updates {
+        /* display: grid; */
+        text-align: left;
+        background-color: lightgray;
+        padding: 10px;
+        font-size: 12pt;
+    }
+    .ct {
+        /* font-weight: 600; */
+    }
+    .cr {
+        font-weight: 600;
+    }
+    .ra {
+        margin: 0 0 7px 0;
+        font-style: italic;
+    }
+    .ci {
+        margin: 0 0 7px 0;
+    }
+    .gh_section {
+        border-left: solid 2px black;
+        padding-left: 7px;
     }
     @media screen and (max-width: 1000px) and (min-height: 1300px) {
         #box {
@@ -20,16 +60,41 @@
         .item {
             font-size: 6vw;
         }
+        #updates {
+            font-size: 5vw;
+        }
+        #gh-logo {
+            height: 45px;
+            width: 45px;
+            padding: 0 0px 12.5px 0;
+        }
+        #head {
+            width: 50%;
+        }
+        .item {
+            margin: 0.3em;
+            margin-block-end: 0.2em;
+        }
+        .gh_section {
+            border-left: solid 4px black;
+        }
+    }
+    .updates_wrapper {
+        overflow-y: scroll;
+        overscroll-behavior-y: none;
     }
   </style>
   <title>Jackson Fellows</title>
 </head>
 <body style="display: flex; justify-content: center;">
   <div id="box">
-    <h2 class="item" id="name">Jackson Fellows</h2>
-    <img src="head_low.jpg" width="60%">
-    <p class="item">jf787@cornell.edu, jtfellows@icloud.com</p>
-    <p class="item"><a href="https://github.com/jacksonfellows">GitHub Profile</a></p>
-    <p class="item"><a href="cv.pdf">CV</a></p>
+    <div>
+      <h2 class="item" id="name">Jackson Fellows</h2>
+      <img id="head" src="head_low.jpg" width="60%">
+      <p class="item">jf787@cornell.edu, jtfellows@icloud.com</p>
+      <p class="item"><a href="https://github.com/jacksonfellows">GitHub Profile</a></p>
+      <p class="item"><a href="cv.pdf">CV</a></p>
+    </div>
   </div>
+  <script src="main.js"></script>
 </body>
