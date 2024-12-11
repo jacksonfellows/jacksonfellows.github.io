@@ -45,7 +45,7 @@ function display_last_commit(info) {
     updates_div.appendChild(d);
 }
 
-let repos = ["jacksonfellows.github.io", "euler", "jot", "sray", "pytorch-seismic-inference", "seismoslide", "aoc"];
+let repos = ["jacksonfellows.github.io", "euler", "jot", "pytorch-seismic-inference", "seismoslide", "aoc"];
 
 
 async function load() {
