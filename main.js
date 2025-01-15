@@ -45,7 +45,7 @@ function display_last_commit(info) {
     updates_div.appendChild(d);
 }
 
-let repos = ["jacksonfellows.github.io", "euler", "aoc"];
+let repos = ["jacksonfellows.github.io", "euler", "aoc", "misc"];
 
 
 async function load() {
