@@ -18,7 +18,7 @@ async function get_recent_commits(repo) {
     const cacheData = JSON.parse(cache);
     
     // Check if cache exists and is still valid
-    if (cache && repo in cacheData) {
+    if (cache && repo in cacheData.commits) {
         if (now < cacheData.timestamp + CACHE_EXPIRATION_TIME) {
             return cacheData.commits[repo] || [];
         }
