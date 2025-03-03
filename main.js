@@ -64,7 +64,7 @@ function display_last_commit(info) {
     let d = document.createElement("div");
     d.classList.add("gh_section");
     d.classList.add("ci");
-    d.innerHTML = `<a href="${commit_url}" style="text-decoration: none;"><img src="github_logo.svg" id="gh-logo"> <span class="ct">${commit_timestring}</span> <span class="cr">${repo}</span> ${commit_message}</a>`;
+    d.innerHTML = `<a href="${commit_url}" style="text-decoration: none;"><img src="github_logo.svg" id="gh-logo"> <span class="ct">${commit_timestring}</span> <span class="cr">${repo}</span> <span class="cm">${commit_message}</cm></a>`;
     updates_div.appendChild(d);
 }
 
