@@ -79,6 +79,24 @@
         max-width: 490px;
     }
 
+    #header {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        display: flex;
+        align-items: center;
+        grid-column: span 3;
+    }
+
+    #header>h2 {
+        font-size: 1.5em;
+        font-family: "Palatino", serif;
+        text-align: center;
+        flex-grow: 1;
+        margin: 3px;
+    }
+
     @media (max-width: 1000px) {
         #g {
             grid-template-columns: 250px;
@@ -91,13 +109,19 @@
         .project-image-double>img {
             max-width: 230px;
         }
+
+        #header {
+            grid-column: span 1;
+        }
     }
 </style>
 
 <body>
-    <!-- TODO downsize pics -->
-    <!-- TODO don't all start w/ "Worked with..." -->
     <div id="g">
+        <div id="header">
+            <a style="color: black; float: left; position: absolute;" href="index.html">Home</a>
+            <h2>Portfolio</h2>
+        </div>
         <div class="project double">
             <div>
                 <h3>Seismic Detection of Surface Mass Movements</h3>
@@ -120,7 +144,7 @@
                 <a class="container-link" href="https://github.com/jacksonfellows/research_summer_23"></a>
                 <h3>Shore-Crossing Tomography</h3>
                 <h3 class="time">Summer 2023</h3>
-                Worked with Professor Lindsay Worthington at UNM to model seismic velocities offshore Kodiak Island, Alaska using airgun shots recorded on a nodal array.
+                Worked with Prof. Lindsay Worthington at UNM to model seismic velocities offshore Kodiak Island, Alaska using airgun shots recorded on a nodal array.
             </div>
             <div class="project-image"><img src="pics/megashot_comparison.png"></div>
         </div>
@@ -139,7 +163,7 @@
                 <h3 class="time">Fall 2023</h3>
                 Simple tool to visualize ℂ → ℂ mappings.
                 Try it out <a class="inner-link" href="https://jacksonfellows.github.io/complex_mappings/">here</a> (works best in Chrome).
-                See <a class="inner-link" href="https://twitter.com/stevenstrogatz/status/1700519144444014637?s=20">here</a> for Steven Strogatz's tweets with example usage.
+                See <a class="inner-link" href="https://twitter.com/stevenstrogatz/status/1700519144444014637?s=20">here</a> for Prof. Steven Strogatz's tweets with example usage.
             </div>
             <div class="project-image"><img src="pics/complex_mappings.png"></div>
         </div>
