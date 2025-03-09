@@ -1,107 +1,103 @@
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <head>
-  <style>
-    body {
-        font-family: "Gill Sans", sans-serif;
-        font-size: 14pt;
-    }
-    a {
-        color: black;
-    }
-    h2 {
-        margin-top: 7px;
-        margin-bottom: 3px;
-    }
-    #name {
-        font-size: 1.5em;
-        font-family: "Palatino", serif;
-    }
-    .item {
-        margin: 0.6em;
-        margin-block-end: 0.4em;
-    }
-    #box {
-        text-align: center;
-        max-width: 300px;
-        display: grid;
-        grid-template-rows: max-content 1fr;
-        height: 100%;
-        grid-row-gap: 40px;
-    }
-    #gh-logo {
-        vertical-align: middle;
-        padding: 0 0px 5px 0;
-        height: 20px;
-        width: 20px;
-    }
-    .updates {
-        /* display: grid; */
-        text-align: left;
-        padding: 10px;
-        font-size: 12pt;
-    }
-    .cr {
-        font-weight: 600;
-    }
-    .cm {
-	/* Font used by GH for commit messages */
-        font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-        font-size: 90%;
-    }
-    .ra {
-        margin: 0 0 7px 0;
-        font-style: italic;
-    }
-    .ci {
-        margin: 0 0 7px 0;
-    }
-    .gh_section {
-        border-left: solid 2px black;
-        padding-left: 7px;
-    }
-    @media screen and (max-width: 1000px) and (min-height: 1300px) {
-        #box {
-            width: 100vw;
-            max-width: none;
+    <style>
+        body {
+            font-family: "Gill Sans", sans-serif;
+            font-size: 14pt;
         }
+
+        a {
+            color: black;
+        }
+
+        h2 {
+            margin-top: 7px;
+            margin-bottom: 3px;
+        }
+
         #name {
-            font-size: 9vw;
+            font-size: 1.5em;
+            font-family: "Palatino", serif;
         }
+
         .item {
-            font-size: 6vw;
+            margin: 0.6em;
+            margin-block-end: 0.4em;
         }
-        .updates {
-            font-size: 5vw;
+
+        #box {
+            text-align: center;
+            max-width: 300px;
+            display: grid;
+            grid-template-rows: max-content 1fr;
+            height: 100%;
+            grid-row-gap: 40px;
         }
+
         #gh-logo {
-            height: 45px;
-            width: 45px;
-            padding: 0 0px 12.5px 0;
+            vertical-align: middle;
+            padding: 0 0px 5px 0;
+            height: 20px;
+            width: 20px;
         }
-        #head {
-            width: 50%;
+
+        .updates {
+            /* display: grid; */
+            text-align: left;
+            padding: 10px;
+            font-size: 12pt;
         }
-        .item {
-            margin: 0.3em;
-            margin-block-end: 0.2em;
+
+        .cr {
+            font-weight: 600;
         }
+
+        .cm {
+            /* Font used by GH for commit messages */
+            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 90%;
+        }
+
+        .ra {
+            margin: 0 0 7px 0;
+            font-style: italic;
+        }
+
+        .ci {
+            margin: 0 0 7px 0;
+        }
+
         .gh_section {
-	    margin-top: 2.5vw;
-            border-left: solid 0.625vw black;
+            border-left: solid 2px black;
+            padding-left: 7px;
         }
-    }
-  </style>
-  <title>Jackson Fellows</title>
+
+        @media (max-width: 1000px) {
+            #box {
+                width: 100vw;
+                max-width: none;
+            }
+
+            .updates {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    </style>
+    <title>Jackson Fellows</title>
 </head>
+
 <body style="display: flex; justify-content: center;">
-  <div id="box">
-    <div>
-      <h2 class="item" id="name">Jackson Fellows</h2>
-      <img id="head" src="head_low.jpg" width="60%">
-      <p class="item">jtfellows@icloud.com</p>
-      <p class="item"><a href="https://github.com/jacksonfellows">GitHub Profile</a></p>
-      <p class="item"><a href="cv.pdf">CV</a></p>
+    <div id="box">
+        <div>
+            <h2 class="item" id="name">Jackson Fellows</h2>
+            <img id="head" src="head_low.jpg" width="60%">
+            <p class="item">jtfellows@icloud.com</p>
+            <p class="item"><a href="https://github.com/jacksonfellows">GitHub Profile</a></p>
+            <p class="item"><a href="cv.pdf">CV</a></p>
+        </div>
     </div>
-  </div>
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
