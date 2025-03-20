@@ -44,12 +44,12 @@ let updates_div;
 function display_header() {
     let b = document.createElement("div");
     document.getElementById("box").appendChild(b);
-    b.classList.add("updates_wrapper");
+    b.classList.add("github-updates-wrapper");
     updates_div = document.createElement("div");
-    updates_div.classList.add("updates");
+    updates_div.classList.add("github-updates");
     b.appendChild(updates_div);
     let d = document.createElement("p");
-    d.classList.add("ra");
+    d.classList.add("github-updates-header");
     d.innerHTML = "Recent GitHub activity";
     updates_div.appendChild(d);
 }
@@ -62,9 +62,9 @@ function display_last_commit(info) {
     let commit_timestamp = new Date(info["commit"]["author"]["date"]);
     let commit_timestring = commit_timestamp.toLocaleDateString("en-US", {month: "long", day: "numeric"});
     let d = document.createElement("div");
-    d.classList.add("gh_section");
-    d.classList.add("ci");
-    d.innerHTML = `<a href="${commit_url}" style="text-decoration: none;"><img src="github_logo.svg" id="gh-logo"> <span class="ct">${commit_timestring}</span> <span class="cr">${repo}</span> <span class="cm">${commit_message}</cm></a>`;
+    d.classList.add("github-section");
+    d.classList.add("github-commit-item");
+    d.innerHTML = `<a href="${commit_url}" style="text-decoration: none;"><img src="github_logo.svg" class="github-logo"> <span class="github-commit-time">${commit_timestring}</span> <span class="github-repo-name">${repo}</span> <span class="github-commit-message">${commit_message}</span></a>`;
     updates_div.appendChild(d);
 }
 

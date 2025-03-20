@@ -1,124 +1,122 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-    body {
-        font-family: "Gill Sans", sans-serif;
-        font-size: 14pt;
-    }
-
-    #g {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 250px 250px 250px;
-        column-gap: 10px;
-        row-gap: 10px;
-    }
-
-    .double {
-        grid-column: span 2;
-    }
-
-    .project {
-        min-height: 200px;
-        min-width: 0;
-        padding: 10px;
-        position: relative;
-        background-color: hsl(209, 37%, 95%);
-        transition: background-color 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
-    }
-
-    .project:hover {
-        background-color: hsl(209, 37%, 85%);
-    }
-
-    .container-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-
-    .inner-link {
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Used for project headings */
-    h3 {
-        margin-top: 8px;
-        margin-bottom: 2px;
-    }
-
-    .time {
-        margin-top: 0;
-        margin-bottom: 8px;
-        text-align: right;
-        font-style: italic;
-    }
-
-    .project-image {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-grow: 1;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .project-image>img {
-        max-width: 230px;
-    }
-
-    .project-image-double>img {
-        max-width: 490px;
-    }
-
-    #header {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        padding-left: 3px;
-        padding-right: 3px;
-        display: flex;
-        align-items: center;
-        grid-column: span 3;
-    }
-
-    #header>h2 {
-        font-size: 1.5em;
-        font-family: "Palatino", serif;
-        text-align: center;
-        flex-grow: 1;
-        margin: 3px;
-    }
-
-    @media (max-width: 1000px) {
-        #g {
-            grid-template-columns: 250px;
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #portfolio-grid {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 250px 250px 250px;
+            column-gap: 10px;
+            row-gap: 10px;
         }
 
         .double {
-            grid-column: span 1;
+            grid-column: span 2;
         }
 
-        .project-image-double>img {
+        .project {
+            min-height: 200px;
+            min-width: 0;
+            padding: 10px;
+            position: relative;
+            background-color: hsl(209, 37%, 95%);
+            transition: background-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+        }
+
+        .project:hover {
+            background-color: hsl(209, 37%, 85%);
+        }
+
+        .container-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .inner-link {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Used for project headings */
+        h3 {
+            margin-top: 8px;
+            margin-bottom: 2px;
+        }
+
+        .time {
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .project-image {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            flex-grow: 1;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-image>img {
             max-width: 230px;
         }
 
-        #header {
-            grid-column: span 1;
+        .project-image-double>img {
+            max-width: 490px;
         }
-    }
-</style>
+
+        #portfolio-header {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 3px;
+            padding-right: 3px;
+            display: flex;
+            align-items: center;
+            grid-column: span 3;
+        }
+
+        #portfolio-header>h2 {
+            font-size: 1.5em;
+            font-family: "Palatino", serif;
+            text-align: center;
+            flex-grow: 1;
+            margin: 3px;
+        }
+
+        @media (max-width: 1000px) {
+            #portfolio-grid {
+                grid-template-columns: 250px;
+            }
+
+            .double {
+                grid-column: span 1;
+            }
+
+            .project-image-double>img {
+                max-width: 230px;
+            }
+
+            #portfolio-header {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
 
 <body>
-    <div id="g">
-        <div id="header">
+    <div id="portfolio-grid">
+        <div id="portfolio-header">
             <a style="color: black; float: left; position: absolute;" href="index.html">Home</a>
             <h2>Portfolio</h2>
         </div>

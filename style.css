@@ -1,0 +1,14 @@
+/* Common styles for both index and portfolio pages */
+body {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14pt;
+}
+
+a {
+    color: black;
+}
+
+h2 {
+    margin-top: 7px;
+    margin-bottom: 3px;
+}
