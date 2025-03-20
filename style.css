@@ -4,8 +4,13 @@ body {
     font-size: 14pt;
 }
 
-a {
-    color: black;
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    color: rgb(0, 94, 162);
+    text-decoration: underline;
 }
 
 h2 {
