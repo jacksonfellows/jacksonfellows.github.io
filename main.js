@@ -17,9 +17,16 @@ async function get_recent_commits(repo) {
     const now = Date.now();
     const cacheData = JSON.parse(cache);
 
+    // Check if we have malformed (e.g. saved by an old version of the site) cache data.
+    if (cache && (!("commits" in cacheData) || !("timestamps" in cacheData))) {
+        localStorage.clear();
+        console.log(`Clearing old cache (${CACHE_KEY})`);
+        cache = null;
+    }
+
     // Check if cache exists and is still valid
-    if (cache && repo in cacheData.commits) {
-        if (now < cacheData.timestamp + CACHE_EXPIRATION_TIME) {
+    if (cache && repo in cacheData.commits && repo in cacheData.timestamps) {
+        if (now < cacheData.timestamps[repo] + CACHE_EXPIRATION_TIME) {
             return cacheData.commits[repo] || [];
         }
     }
@@ -30,9 +37,9 @@ async function get_recent_commits(repo) {
         let j = await response.json();
 
         // Update cache with the new commits
-        const updatedCache = cache ? JSON.parse(cache) : { commits: {} };
+        const updatedCache = cache ? JSON.parse(cache) : { commits: {}, timestamps: {} };
         updatedCache.commits[repo] = j;
-        updatedCache.timestamp = now; // Set new timestamp
+        updatedCache.timestamps[repo] = now; // Set new timestamp for this repo
         localStorage.setItem(CACHE_KEY, JSON.stringify(updatedCache));
 
         return j;
