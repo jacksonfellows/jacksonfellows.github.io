@@ -1,110 +1,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
 <head>
-    <link rel="stylesheet" href="style.css">
     <style>
-        #name {
-            font-size: 1.5em;
-            font-family: "Palatino", serif;
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20pt;
+            margin: 30pt;
         }
 
-        .item {
-            margin: 0.6em;
-            margin-block-end: 0.4em;
+        #upper-right {
+            float: right;
+            text-align: right;
         }
 
-        .profile-container {
-            text-align: center;
-            max-width: 300px;
-            display: grid;
-            grid-template-rows: max-content 1fr;
-            height: 100%;
-            grid-row-gap: 40px;
+        .center {
+            grid-column: span 2;
         }
 
-        /* GitHub activity section styles */
-        .github-logo {
-            vertical-align: middle;
-            padding: 0 0px 5px 0;
-            height: 20px;
-            width: 20px;
+        h2 {
+            font-size: 35pt;
+            margin: 0;
         }
 
-        .github-updates {
-            text-align: left;
-            padding: 10px;
-            font-size: 12pt;
-        }
-
-        .github-updates-header {
-            margin: 0 0 7px 0;
-            font-style: italic;
-        }
-
-        .github-commit-item {
-            margin: 0 0 7px 0;
-        }
-
-        .github-section {
-            border-left: solid 2px black;
-            padding-left: 7px;
-        }
-
-        .github-commit-link,
-        .github-commit-link:visited,
-        .github-commit-link:hover,
-        .github-commit-link:active,
-        .github-commit-link:focus {
+        a {
             color: black;
-            text-decoration: none;
         }
 
-        .github-repo-name {
+        p {
+            font-size: 13pt;
+            margin-top: 2pt;
+            margin-bottom: 2pt;
+        }
+
+        .icon-link {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .icon-link-img {
+            height: 30px;
+        }
+
+        #icons-list {
+            width: 100pt;
+            float: right;
+            margin-top: 10pt;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .job-title {
             font-weight: 600;
         }
 
-        .github-commit-message {
-            font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-            font-size: 90%;
+        .job-desc {
+            font-weight: 300;
+        }
+
+        .sectoin {
+            margin-top: 30pt;
+        }
+
+        .section>p {
+            margin-top: 10pt;
         }
 
         /* Media query for smaller screens */
-        @media (max-width: 440px) {
-            .profile-container {
-                width: 100vw;
-                max-width: none;
-            }
-
-            .github-updates {
-                padding-left: 0;
-                padding-right: 0;
+        @media (max-width: 800px) {
+            body {
+                grid-template-columns: 1fr;
             }
         }
-
-	.bars {
-		max-width: 180px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 0;
-	}
-
-	.bars > a {
-		white-space: nowrap;
-	}
     </style>
     <title>Jackson Fellows</title>
 </head>
 
-<body style="display: flex; justify-content: center;">
-    <div id="box" class="profile-container">
-        <div>
-            <h2 class="item" id="name">Jackson Fellows</h2>
-            <img src="head_low.jpg" width="180px">
-            <p class="item">jtfellows@icloud.com</p>
-	    <p class="item bars"><a href="portfolio.html">Portfolio</a> | <a href="cv.pdf">CV</a></p>
-	    <p class="item bars" style="margin-top: 5px"><a href="https://github.com/jacksonfellows">GitHub</a> | <a href="https://orcid.org/0009-0006-1492-7634">ORCID</a></p>
+<body style="display: grid;">
+    <div id="upper-left">
+        <h2><span style="font-weight: 700">Jackson</span> <span style="font-weight: 300">Fellows</span></h2>
+        <p>Geophysics PhD at Caltech</p>
+        <p>BS in Engineering at Cornell</p>
+    </div>
+    <div id="upper-right">
+        <!-- TODO check this is my email -->
+        <p>jfellows@caltech.edu</p>
+        <div id="icons-list">
+            <!-- TODO make these actual links -->
+            <div class="icon-link">
+                <a href="https://www.linkedin.com/in/jackson-fellows-b08269343"><img class="icon-link-img" src="linkedin.svg"></img></a>
+            </div>
+            <div class="icon-link">
+                <a href="https://orcid.org/0009-0006-1492-7634"><img class="icon-link-img" src="orcid.svg"></img></a>
+            </div>
+            <div class="icon-link">
+                <a href="https://github.com/jacksonfellows"><img class="icon-link-img" src="github.svg"></img></a>
+            </div>
         </div>
     </div>
-    <script src="main.js"></script>
+    <div>
+        <p style="border-top: solid 2pt black; padding-top: 16pt;">
+            <!-- TODO edit this -->
+            I’m an incoming Geophysics PhD student at Caltech. I’m excited by the development of tools to glean insights about the Earth from large datasets. I’m especially motivated by problems impacting society, such as mass movement hazards or sea level rise caused by glacial mass loss. When I’m not debugging code, I’m playing in the mountains.
+        </p>
+        <div id="section">
+            <h3>EXPERIENCE</h3>
+            <p><span class="job-title">Research Assistant, Cornell University, Ithaca, NY</span> <span class="job-desc">Developed a ML model to detect & classify mass movements in seismic data.</span></p>
+            <p><span class="job-title">Pathways Intern, United States Geologic Survey, Golden, CO</span> <span class="job-desc">Rewrote in Python (& optimized) earthquake location codes.</span></p>
+            <p><span class="job-title">URISE Intern, Alberquerque, NM</span> <span class="job-desc">Developed new methods for processsing onshore-offshore seismic data for travel-time tomography studies.</span></p>
+            <p><a href="cv.pdf">Full CV</a></p>
+        </div>
+        <div id="section">
+            <h3>PUBLICATIONS</h3>
+            <p>J. Fellows, G. Barcheck, W. Thelen, A. Iezzi, and N. Stevens. Two Decades of Small Mass Movements Detected at Mount St. Helens Using Deep-Learning Seismology. Submitted, 2025.</p>
+        </div>
+    </div>
+    <div>
+        <img src="site_main_1.JPG" style="width: 100%;"></img>
+    </div>
 </body>
