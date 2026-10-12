@@ -1,130 +1,250 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-<head>
-    <style>
-        body {
-            font-family: "Open Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: normal;
-            font-style: normal;
-            font-variation-settings: "wdth" 100;
+        <style>
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "width" 100;
+    margin: 30pt;
+}
 
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20pt;
-            margin: 30pt;
-        }
+/* Single centered column */
+#page {
+    max-width: 600pt;
+    margin: 0 auto;
+}
 
-        #upper-right {
-            float: right;
-            text-align: right;
-        }
+/* Name/bio on the left, email + icons on the right, same row */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20pt;
+}
 
-        .center {
-            grid-column: span 2;
-        }
+#upper-right {
+    text-align: right;
+    flex-shrink: 0;
+    align-self: flex-end;
+}
 
-        h2 {
-            font-size: 35pt;
-            margin: 0;
-        }
+h2 {
+    font-size: 35pt;
+    margin: 0;
+}
 
-        a {
-            color: black;
-        }
+a {
+    color: black;
+}
 
-        p {
-            font-size: 13pt;
-            margin-top: 2pt;
-            margin-bottom: 2pt;
-        }
+p {
+    font-size: 13pt;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+}
 
-        .icon-link {
-            text-align: center;
-            font-weight: 700;
-        }
+.icon-link {
+    text-align: center;
+    font-weight: 700;
+}
 
-        .icon-link-img {
-            height: 30px;
-        }
+.icon-link-img {
+    height: 30px;
+}
 
-        #icons-list {
-            width: 100pt;
-            float: right;
-            margin-top: 10pt;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
+#icons-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10pt;
+    margin-top: 10pt;
+}
 
-        .job-title {
-            font-weight: 600;
-        }
+#content {
+    margin-top: 20pt;
+    border-top: solid 2pt black;
+}
 
-        .job-desc {
-            font-weight: 300;
-        }
+#photo {
+    margin-top: 20pt;
+}
 
-        .sectoin {
-            margin-top: 30pt;
-        }
+#photo img {
+    width: 100%;
+    display: block;
+}
 
-        .section>p {
-            margin-top: 10pt;
-        }
+.tab-link {
+    text-decoration: none;
+    width: 70pt;
+    text-align: center;
+    padding: 2pt;
+}
 
-        /* Media query for smaller screens */
-        @media (max-width: 800px) {
-            body {
-                grid-template-columns: 1fr;
+.tab-link:focus-visible {
+    outline: none;
+}
+
+.tab-link-sel {
+    /* font-weight: 700; */
+    color: white;
+    background-color: black;
+}
+
+.tab {
+    display: none;
+}
+
+.tab-sel {
+    display: block;
+}
+
+#tab-links {
+    margin-top: 10pt;
+    margin-bottom: 16pt;
+    /*
+    display: flex;
+    justify-content: space-between;
+    width: 150pt;
+    */
+}
+
+/* Smaller screens: scale down, make header rows instead of columns */
+@media (max-width: 620px) {
+    body {
+        margin: 16pt;
+    }
+
+    h2 {
+        font-size: 24pt;
+    }
+
+    #header {
+        gap: 10pt;
+        flex-direction: column;
+    }
+
+    #upper-right {
+        text-align: left;
+        align-self: flex-start;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .icon-link-img {
+        height: 22px;
+    }
+
+    #icons-list {
+        gap: 6pt;
+    }
+
+    #email {
+        align-content: end;
+    }
+}
+        </style>
+        <title>Jackson Fellows</title>
+    </head>
+
+    <body>
+        <div id="page">
+            <div id="header">
+                <div id="upper-left">
+                    <h2><span style="font-weight: 700">Jackson</span> <span style="font-weight: 300">Fellows</span></h2>
+                    <p>Geophysics PhD Student at Caltech</p>
+                    <p>BS in Engineering at Cornell</p>
+                </div>
+                <div id="upper-right">
+                    <p id="email">jfellows@caltech.edu</p>
+                    <div id="icons-list">
+                        <div class="icon-link">
+                            <a href="https://www.linkedin.com/in/jackson-fellows-b08269343"><img class="icon-link-img" src="linkedin.svg" alt="LinkedIn"></a>
+                        </div>
+                        <div class="icon-link">
+                            <a href="https://orcid.org/0009-0006-1492-7634"><img class="icon-link-img" src="orcid.svg" alt="ORCID"></a>
+                        </div>
+                        <div class="icon-link">
+                            <a href="https://github.com/jacksonfellows"><img class="icon-link-img" src="github.svg" alt="GitHub"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="tab-links">
+                    <a href="#about-me" class="tab-link" id="about-me">ABOUT ME</a> | <a href="#research" class="tab-link" id="research">RESEARCH</a>
+                    <!-- | <a href="#science-communication" class="tab-link" id="science-communication">SCIENCE COMMUNICATION</a> -->
+                </div>
+
+                <div class="tab" id="tab-about-me">
+                    I’m a second-year geophysics PhD student at Caltech.
+                    My primary research focus is glaciology, but I am also interested in seismology and physical oceanography.
+                    I grew up in Seattle, Washington, where camping and hiking in the Cascades gave me an appreciation for both the beauty and hazards of geophysical processes.
+                    When I’m not doing research, I like to hike, bike, and run in the mountains of Southern California.
+                    <div id="photo">
+                        <img src="site_main_2.jpeg" alt="">
+                    </div>
+                </div>
+
+                <div class="tab" id="tab-research">
+                    My research in glaciology has focused on the ice shelves (floating extensions of glaciers that extend onto the ocean) that surround Antarctica.
+                    I’m drawn to glaciology both for its inherent scientific interest and for its societal relevance in projecting future sea level rise.
+                    Ice shelves play a key role in the response of Antarctica to a warming atmosphere and ocean as they support (buttress) the grounded ice that flows into them.
+                    In this way ice shelves, even though they have already displaced their equivalent mass of water and thus made their contribution sea level rise, regulate the mass loss from the ice sheet.
+                    As ice shelves thin, primarily due to melt from warmer ocean waters, they will provide less buttressing, and may even transition to an unstable state and collapse rapidly.
+                    Understanding these processes is key to making credible predictions of sea level rise for the remainder of the 21<sup>st</sup> century and beyond.
+                    My research involves developing simple models to understand ice shelves and how they respond to external forcings and using remote-sensing data from satellites to constrain the processes governing ice deformation and fracture.
+
+                    <br><br>
+                    In addition to glaciology, I’m interested in how we can use the tools of seismology to better understand environmental processes.
+                    For an undergraduate research project, I worked with professor Grace Barcheck at Cornell and scientists at the Pacific Northwest Seismic Network and Cascades Volcano Observatory to develop a machine learning model to detect mass movements (e.g., rockfalls, landslides, and avalanches) in continuous seismic data.
+                    Tools like this provide valuable information about what drives these events over time (e.g., seasonal and daily patterns), and also have the potential to be applied to real-time warning systems.
+                    Currently, I am working on a project on applying seismic ocean thermometry to the Southern Ocean.
+                    Seismic ocean thermometry utilizes repeating earthquakes to make precise measurements of how the acoustic wavespeed in the ocean changes over time.
+                    By converting this velocity change to a temperature change, it can measure the small (on the order of 1/1000<sup>th</sup> of a &deg;C per year) warming trends due to the increase of ocean heat content due to global warming.
+                    Applying seismic ocean thermometry to the Southern Ocean has the potential to provide a valuable, independent dataset in a region that, due to seasonal sea ice and inaccessibility  during austral winter, is undersampled by traditional methods.
+                </div>
+
+                <div class="tab" id="tab-science-communication">
+                    TODO
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let tab_links = document.getElementsByClassName("tab-link");
+            let tabs = document.getElementsByClassName("tab");
+
+            function select_tab(id) {
+                for (let j = 0; j < tabs.length; j++) {
+                    if (tabs[j].id == id) {
+                        tabs[j].classList.add("tab-sel");
+                        tab_links[j].classList.add("tab-link-sel");
+                    } else {
+                        tabs[j].classList.remove("tab-sel");
+                        tab_links[j].classList.remove("tab-link-sel");
+                    }
+                }
             }
-        }
-    </style>
-    <title>Jackson Fellows</title>
-</head>
 
-<body style="display: grid;">
-    <div id="upper-left">
-        <h2><span style="font-weight: 700">Jackson</span> <span style="font-weight: 300">Fellows</span></h2>
-        <p>Geophysics PhD Student at Caltech</p>
-        <p>BS in Engineering at Cornell</p>
-    </div>
-    <div id="upper-right">
-        <p>jfellows@caltech.edu</p>
-        <div id="icons-list">
-            <div class="icon-link">
-                <a href="https://www.linkedin.com/in/jackson-fellows-b08269343"><img class="icon-link-img" src="linkedin.svg"></img></a>
-            </div>
-            <div class="icon-link">
-                <a href="https://orcid.org/0009-0006-1492-7634"><img class="icon-link-img" src="orcid.svg"></img></a>
-            </div>
-            <div class="icon-link">
-                <a href="https://github.com/jacksonfellows"><img class="icon-link-img" src="github.svg"></img></a>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p style="border-top: solid 2pt black; padding-top: 16pt;">
-            I’m an first-year geophysics PhD student at Caltech.
-            My current projects are:
-            <br><br>
-            – Constraining the bathymetry under Antarctic ice shelves from remote sensing observations of the ocean tides (advised by Prof. Brent Minchew)
-            <br>
-            – Applying hybrid seismic wavefield simulation to the study of localized deformation zones such as fault zones and the beds of landslides and glaciers (advised by Prof. Zhongwen Zhan)
-            <br><br>
-            When I’m not doing research, I like to hike, run, and bike in the mountains of Southern California.
-        </p>
-        <div id="section">
-            <h3>EXPERIENCE</h3>
-            <p><span class="job-title">Research Assistant, Cornell University, Ithaca, NY</span> <span class="job-desc">Developed a ML model to detect & classify mass movements in seismic data.</span></p>
-            <p><span class="job-title">Pathways Intern, United States Geologic Survey, Golden, CO</span> <span class="job-desc">Rewrote in Python (& optimized) earthquake location codes.</span></p>
-            <p><span class="job-title">URISE Intern, Albuquerque, NM</span> <span class="job-desc">Developed new methods for processing onshore-offshore seismic data for travel-time tomography studies.</span></p>
-        </div>
-    </div>
-    <div>
-        <img src="site_main_2.jpeg" style="width: 100%;"></img>
-    </div>
-</body>
+            for (let i = 0; i < tab_links.length; i++) {
+                let tab_id = "tab-" + tab_links[i].id;
+                tab_links[i].onclick = e => { select_tab(tab_id); };
+            }
+
+            let init_tab_id = location.hash === "" ? "tab-about-me" : location.hash.replace("#", "tab-");
+            select_tab(init_tab_id);
+        </script>
+    </body>
+</html>
